@@ -4,35 +4,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>LIKOLEH CI</title>
 
 <link rel="stylesheet" href="assets/css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+
 </head>
 
 <body>
 
-<header class="site-header">
+<header>
 
 <div class="logo">
-<img src="assets/images/logo/likoleh-logo.svg" alt="LIKOLEH CI Logo">
+<img src="assets/images/logo/likoleh-logo.svg" alt="Likoleh Logo">
 </div>
 
-<div class="language-switch">
-
-<button onclick="setLanguage('en')">
-<img src="assets/images/flags/gb.svg" alt="English">
-</button>
-
-<button onclick="setLanguage('fr')">
-<img src="assets/images/flags/fr.svg" alt="Français">
-</button>
-
-<button onclick="setLanguage('de')">
-<img src="assets/images/flags/de.svg" alt="Deutsch">
-</button>
-
+<div class="language-switcher">
+<img src="assets/images/flags/gb.svg" onclick="setLanguage('en')">
+<img src="assets/images/flags/fr.svg" onclick="setLanguage('fr')">
+<img src="assets/images/flags/de.svg" onclick="setLanguage('de')">
 </div>
 
 </header>
@@ -40,17 +30,20 @@
 
 <section class="hero">
 
-<h1 id="hero-title">Empowering Communities. Protecting Futures.</h1>
+<div class="hero-content">
+
+<h1 id="hero-title">
+Empowering Communities. Protecting Futures.
+</h1>
 
 <p id="hero-text">
 LIKOLEH CI works across Côte d’Ivoire to empower women, protect children and strengthen rural communities through education and sustainable development.
 </p>
 
-<div class="hero-buttons">
-
-<a href="#" id="donate-btn" class="btn primary">Donate</a>
-
-<a href="#" id="contact-btn" class="btn secondary">Contact</a>
+<div class="buttons">
+<a href="#" class="btn-primary" id="donate-btn">Donate</a>
+<a href="#" class="btn-secondary" id="contact-btn">Contact</a>
+</div>
 
 </div>
 
@@ -67,6 +60,7 @@ Founded in 2014 in Man, Tonkpi Region, LIKOLEH CI is a registered Ivorian NGO pr
 
 </section>
 
+
 <section class="work">
 
 <h2 id="work-title">Our Work</h2>
@@ -75,31 +69,32 @@ Founded in 2014 in Man, Tonkpi Region, LIKOLEH CI is a registered Ivorian NGO pr
 
 <div class="work-card">
 <img src="assets/images/projects/education.jpg">
-<h3 id="work-edu-title">Education</h3>
-<p id="work-edu-text">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<h3 id="work1-title">Education</h3>
+<p id="work1-text">
+Supporting access to education for children in rural communities through school programs and resources.
 </p>
 </div>
 
 <div class="work-card">
 <img src="assets/images/projects/women.jpg">
-<h3 id="work-women-title">Women Empowerment</h3>
-<p id="work-women-text">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<h3 id="work2-title">Women Empowerment</h3>
+<p id="work2-text">
+Promoting economic independence and leadership opportunities for women across local communities.
 </p>
 </div>
 
 <div class="work-card">
 <img src="assets/images/projects/children.jpg">
-<h3 id="work-child-title">Child Protection</h3>
-<p id="work-child-text">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<h3 id="work3-title">Child Protection</h3>
+<p id="work3-text">
+Protecting vulnerable children and supporting safe environments for growth and education.
 </p>
 </div>
 
 </div>
 
 </section>
+
 
 <footer>
 
