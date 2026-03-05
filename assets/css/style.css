@@ -1,3 +1,19 @@
+*,
+*::before,
+*::after{
+box-sizing:border-box;
+}
+
+html, body{
+margin:0;
+padding:0;
+overflow-x:hidden;
+}
+
+*{
+box-sizing:border-box;
+}
+
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
@@ -14,7 +30,6 @@ background:rgba(255,255,255,0.98);
 border-bottom:1px solid #ddd;
 position:sticky;
 top:0;
-width:100%;
 z-index:1000;
 }
 
@@ -119,7 +134,7 @@ font-size:28px;
 
 .work-grid{
 display:grid;
-grid-template-columns:repeat(3, 1fr);
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:28px;
 max-width:1100px;
 margin:auto;
@@ -180,4 +195,38 @@ color:white;
 text-align:center;
 padding:20px;
 font-size:14px;
+}
+
+@media (max-width:640px){
+
+header{
+padding:12px 16px;
+}
+
+.logo img{
+height:44px;
+}
+
+.language-switcher img{
+width:22px;
+margin-left:6px;
+}
+
+.hero{
+height:420px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.buttons{
+flex-direction:column;
+gap:10px;
+}
+
 }
