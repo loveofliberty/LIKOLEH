@@ -1,61 +1,78 @@
-# LIKOLEH Website
+# 🌍 LIKOLEH CI Website
 
-Official website project for **LIKOLEH CI**, a community-based NGO in Côte d’Ivoire.
+Official website project for **LIKOLEH CI**, a community-based NGO working in **Côte d’Ivoire** to empower communities and protect vulnerable children.
 
-The goal of this project is to create a simple, fast and transparent website presenting the work of LIKOLEH and supporting international donations.
-
----
-
-## About LIKOLEH
-
-**LIKOLEH CI** is an Ivorian NGO founded in 2014 in Man, Tonkpi Region.
-The organization works to strengthen rural communities through:
-
-* Education support for children
-* Women's economic empowerment
-* Child protection
-* Community development
+This repository contains the source code for the public website presenting LIKOLEH’s work and connecting supporters internationally.
 
 ---
 
-## Project Purpose
+## ✨ Mission
 
-This repository contains the source code for the LIKOLEH website.
-The site is intentionally built as a **static website** to ensure:
+**LIKOLEH CI** works to strengthen rural communities through:
 
-* high performance
-* low hosting costs
-* simple maintenance
-* transparency
+* 📚 Education support for children
+* 👩 Women's empowerment and economic independence
+* 🛡️ Child protection programs
+* 🤝 Community development initiatives
 
-The website is designed to present LIKOLEH’s work and connect supporters internationally.
-
----
-
-## Technologies
-
-The website uses only lightweight technologies:
-
-* HTML
-* CSS
-* JavaScript
-
-No framework is used in order to keep the project simple and sustainable.
+The organization was founded in **2014 in Man, Tonkpi Region (Côte d’Ivoire).**
 
 ---
 
-## Repository Structure
+## 🖥 Website Concept
+
+The website is intentionally built as a **lightweight static site**.
+
+Advantages:
+
+* ⚡ extremely fast loading
+* 💸 minimal hosting costs
+* 🔧 easy maintenance
+* 🌍 accessible worldwide
+* 🔍 transparent open-source structure
+
+No frameworks are used to keep the project simple and sustainable.
+
+---
+
+## 🧰 Technologies
+
+The website uses only core web technologies:
+
+* **HTML**
+* **CSS**
+* **JavaScript**
+
+This keeps the site portable and easy to maintain long-term.
+
+---
+
+## 🌐 Languages
+
+The website currently supports:
+
+* 🇬🇧 English
+* 🇫🇷 French
+* 🇩🇪 German
+
+Language switching is handled dynamically with JavaScript.
+
+---
+
+## 📂 Repository Structure
 
 ```
 assets/
-  css/
-    style.css
-  images/
-    flags/
-    logo/
-    projects/
-  js/
-    script.js
+ ├─ css/
+ │   └─ style.css
+ │
+ ├─ images/
+ │   ├─ flags/
+ │   ├─ logo/
+ │   └─ projects/
+ │
+ └─ js/
+     └─ script.js
 
 index.html
 README.md
@@ -63,41 +80,51 @@ README.md
 
 ---
 
-## Languages
+## 🖼 Current Website Sections
 
-The website currently supports:
+The landing page currently includes:
 
-* English
-* French
-* German
+* Hero section with mission statement
+* About LIKOLEH
+* Our Work (Education, Women Empowerment, Child Protection)
+* Multilingual interface
 
-Language switching is handled via JavaScript.
-
----
-
-## Future Development
-
-Planned improvements include:
-
-* real project photos
-* impact statistics
-* donation infrastructure
-* social media integration
-* contact options
+More sections will be added as the project develops.
 
 ---
 
-## Contact
+## 🚀 Planned Improvements
 
-For questions about the project or collaboration:
+Upcoming development steps include:
 
-LIKOLEH CI
+* 📊 Impact statistics
+* 🧾 Donation infrastructure
+* 📸 Real project photos
+* 🔗 Social media integration
+* 📬 Contact options
+
+---
+
+## 🤝 Collaboration
+
+This project is maintained to support the work of **LIKOLEH CI**.
+
+Contributions that improve performance, accessibility or clarity are welcome.
+
+---
+
+## 📍 Organization
+
+**LIKOLEH CI**
+Man, Tonkpi Region
 Côte d’Ivoire
 
-More information will be added as the project develops.
+More information about the organization and its projects will be published as the website evolves.
 
 ---
 
-## License
+## ⚖️ License
 
-This project is intended for the official LIKOLEH CI website.
+This repository contains the official website code for LIKOLEH CI.
+
+All rights reserved unless stated otherwise.
