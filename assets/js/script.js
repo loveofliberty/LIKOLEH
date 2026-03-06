@@ -25,7 +25,16 @@ work_child_title:"Child Protection",
 work_child_short:"Programs supporting children without birth certificates.",
 work_child_more:"LIK OLEH works with local authorities to improve birth registration.",
 
-impact_title:"Our Impact"
+impact_title:"Our Impact",
+
+impact_years:"Years of community work",
+impact_children:"Children supported through education",
+impact_women:"Women empowered through local initiatives",
+impact_communities:"Communities reached in Côte d’Ivoire",
+
+support_title:"Support Our Work",
+support_text:"Your support helps LIKOLEH CI empower women, protect children and strengthen rural communities across Côte d’Ivoire.",
+support_button:"Donate Now"
 },
 
 fr:{
@@ -49,7 +58,16 @@ work_child_title:"Protection de l'enfant",
 work_child_short:"Programmes soutenant les enfants sans certificat de naissance.",
 work_child_more:"LIK OLEH améliore l'accès à l'enregistrement des naissances.",
 
-impact_title:"Notre Impact"
+impact_title:"Notre Impact",
+
+impact_years:"Années de travail communautaire",
+impact_children:"Enfants soutenus par l'éducation",
+impact_women:"Femmes autonomisées",
+impact_communities:"Communautés atteintes en Côte d’Ivoire",
+
+support_title:"Soutenez notre action",
+support_text:"Votre soutien aide LIKOLEH CI à autonomiser les femmes, protéger les enfants et renforcer les communautés rurales à travers la Côte d’Ivoire.",
+support_button:"Faire un don"
 },
 
 de:{
@@ -73,7 +91,16 @@ work_child_title:"Kinderschutz",
 work_child_short:"Programme für Kinder ohne Geburtsurkunden.",
 work_child_more:"LIK OLEH arbeitet mit lokalen Behörden zusammen.",
 
-impact_title:"Unsere Wirkung"
+impact_title:"Unsere Wirkung",
+
+impact_years:"Jahre gemeinschaftlicher Arbeit",
+impact_children:"Kinder durch Bildung unterstützt",
+impact_women:"Frauen durch Initiativen gestärkt",
+impact_communities:"Erreichte Gemeinden in Côte d’Ivoire",
+
+support_title:"Unterstützen Sie unsere Arbeit",
+support_text:"Ihre Unterstützung hilft LIKOLEH CI, Frauen zu stärken, Kinder zu schützen und ländliche Gemeinschaften in ganz Côte d’Ivoire zu stärken.",
+support_button:"Jetzt spenden"
 }
 
 };
@@ -83,12 +110,12 @@ impact_title:"Unsere Wirkung"
 // SAFE TEXT UPDATE
 // ---------------------------
 
-function updateText(selector, text){
+function updateText(selector,text){
 
-const element = document.querySelector(selector)
+const element=document.querySelector(selector)
 
 if(element){
-element.textContent = text
+element.textContent=text
 }
 
 }
@@ -122,6 +149,15 @@ updateText("[data-work-child-more]",translations[lang].work_child_more)
 
 updateText("[data-impact-title]",translations[lang].impact_title)
 
+updateText("[data-impact-years]",translations[lang].impact_years)
+updateText("[data-impact-children]",translations[lang].impact_children)
+updateText("[data-impact-women]",translations[lang].impact_women)
+updateText("[data-impact-communities]",translations[lang].impact_communities)
+
+updateText("[data-support-title]",translations[lang].support_title)
+updateText("[data-support-text]",translations[lang].support_text)
+updateText("[data-support-button]",translations[lang].support_button)
+
 }
 
 
@@ -132,7 +168,6 @@ updateText("[data-impact-title]",translations[lang].impact_title)
 document.getElementById("lang-en").onclick=()=>setLanguage("en")
 document.getElementById("lang-fr").onclick=()=>setLanguage("fr")
 document.getElementById("lang-de").onclick=()=>setLanguage("de")
-
 
 
 // ---------------------------
@@ -160,7 +195,6 @@ button.textContent="Show less"
 })
 
 })
-
 
 
 // ---------------------------
