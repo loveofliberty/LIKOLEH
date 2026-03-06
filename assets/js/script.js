@@ -1,162 +1,58 @@
-const translations = {
+// READ MORE
 
-en:{
+document.querySelectorAll(".read-more-btn").forEach(button => {
 
-heroTitle:"Empowering Communities. Protecting Futures.",
+button.addEventListener("click", () => {
 
-heroText:"LIKOLEH CI works across Côte d’Ivoire to empower women, protect children and strengthen rural communities through education and sustainable development.",
+const moreText = button.previousElementSibling.querySelector(".more-text")
 
-donate:"Donate",
-contact:"Contact",
+if(moreText.style.display === "inline"){
 
-aboutTitle:"About LIKOLEH",
+moreText.style.display = "none"
+button.textContent = "Read more"
 
-aboutText:"Founded in 2014 in Man, Tonkpi Region, LIKOLEH CI is a registered Ivorian NGO promoting economic empowerment, child protection, education and peacebuilding across Côte d’Ivoire.",
+}else{
 
-
-workTitle:"Our Work",
-
-work1Title:"Education",
-
-work1Preview:"Supporting access to education for children in rural communities through school programs and resources.",
-work1More:"Promoting children's education by strengthening educational capacities, such as building school canteens to keep children in school. This includes donating school kits and building and renovating school infrastructure such as classrooms and toilets. We provide socio-professional reintegration for vulnerable children living on the streets. LIKOLEH CI plans to introduce computers into primary and nursery schools. We provide water, hygiene, and sanitation (WASH in school) with a particular focus on menstrual hygiene for girls and water point management.",
-
-work2Title:"Women Empowerment",
-
-work2Preview:"Promoting economic independence and leadership opportunities for women across local communities.",
-work2More:"The NGO LIKOLEH CI encourages women and girls to take on community leadership roles, notably by supporting their integration into traditional decision-making bodies and by strengthening their educational capacities, their socio-economic management systems, unity, social cohesion, and peace. Women are also supported to set up income-generating activities such as farming, cassava, millet, sorghum and other local agricultural products. Another important activity contributing to empowerment in Tonkpi is the improved tontine system called AVEC (Association for the Promotion of Community Savings).",
-
-work3Title:"Child Protection",
-
-work3Preview:"Protecting vulnerable children and supporting safe environments for growth and education.",
-work3More:"For the NGO LIKOLEH CI and the state of Côte d’Ivoire, every child has the right to an identity to avoid being stateless. The birth certificate is therefore a vital document for a child. The NGO prioritizes bringing civil registry services closer to maternity wards so that every child born is registered immediately and receives a birth certificate. LIKOLEH CI collaborates with civil registry offices and local authorities to provide supplementary judgments and birth certificates for vulnerable children and facilitate their seamless school enrollment."
-
-},
-
-fr:{
-
-heroTitle:"Autonomiser les communautés. Protéger l'avenir.",
-
-heroText:"LIKOLEH CI œuvre en Côte d’Ivoire pour autonomiser les femmes, protéger les enfants et renforcer les communautés rurales par l’éducation et le développement durable.",
-
-donate:"Faire un don",
-contact:"Contact",
-
-aboutTitle:"À propos de LIKOLEH",
-
-aboutText:"Fondée en 2014 à Man, Région du Tonkpi, LIKOLEH CI est une ONG ivoirienne enregistrée promouvant l’autonomisation économique, la protection de l’enfance, l’éducation et la consolidation de la paix en Côte d’Ivoire.",
-
-
-workTitle:"Nos Actions",
-
-work1Title:"Éducation",
-
-work1Preview:"Favoriser l'accès à l'éducation pour les enfants des communautés rurales grâce à des programmes scolaires et des ressources.",
-work1More:"Promotion de la scolarisation des enfants par le renforcement des capacités éducatives comme la construction de cantines scolaires pour maintenir les enfants à l’école. Cela inclut les dons de kits scolaires ainsi que la construction et la réhabilitation d’infrastructures scolaires telles que les salles de classe et les toilettes. L’ONG favorise également la réinsertion socio-professionnelle des enfants vulnérables vivant dans la rue et prévoit l’introduction d’ordinateurs dans les écoles primaires et maternelles. Des actions WASH sont menées dans les écoles avec un accent particulier sur l’hygiène menstruelle des filles et la gestion des points d’eau.",
-
-work2Title:"Autonomisation des femmes",
-
-work2Preview:"Promouvoir l'autonomie économique et le leadership des femmes dans les communautés locales.",
-work2More:"L’ONG LIKOLEH CI encourage les femmes et les jeunes filles au leadership communautaire notamment par leur intégration dans les instances traditionnelles de prises de décisions et par le renforcement de leurs capacités éducatives et socio-économiques. Les femmes sont également accompagnées pour mettre en place des activités génératrices de revenus comme l’agriculture (riz, manioc, mil, sorgho) ou d’autres produits locaux transformés et vendus. Une autre activité importante pour l’autonomisation est l’amélioration de la tontine appelée AVEC (Association de valorisation des épargnes communautaires).",
-
-work3Title:"Protection de l'enfant",
-
-work3Preview:"Protéger les enfants vulnérables et soutenir des environnements sûrs pour grandir et apprendre.",
-work3More:"Pour l’ONG LIKOLEH CI et l’État de Côte d’Ivoire, tout enfant a droit à une identité afin d’éviter l’apatridie. L’extrait d’acte de naissance est donc un document vital. L’ONG privilégie le rapprochement des services d’état civil auprès des maternités afin que chaque enfant soit enregistré dès la naissance et obtienne un acte. LIKOLEH CI identifie également des enfants vulnérables partout en Côte d’Ivoire et collabore avec les mairies et sous-préfectures pour l’obtention de jugements supplétifs et d’actes de naissance afin de faciliter leur scolarisation."
-
-},
-
-de:{
-
-heroTitle:"Gemeinschaften stärken. Zukunft schützen.",
-
-heroText:"LIKOLEH CI arbeitet in Côte d’Ivoire, um Frauen zu stärken, Kinder zu schützen und ländliche Gemeinschaften durch Bildung und nachhaltige Entwicklung zu fördern.",
-
-donate:"Spenden",
-contact:"Kontakt",
-
-aboutTitle:"Über LIKOLEH",
-
-aboutText:"Gegründet 2014 in Man, Region Tonkpi, ist LIKOLEH CI eine registrierte ivorische NGO zur Förderung von wirtschaftlicher Stärkung, Kinderschutz, Bildung und Friedensarbeit.",
-
-
-workTitle:"Unsere Arbeit",
-
-work1Title:"Bildung",
-
-work1Preview:"Unterstützung des Bildungszugangs für Kinder in ländlichen Gemeinden durch Schulprogramme und Ressourcen.",
-work1More:"Förderung der Einschulung von Kindern durch den Ausbau der Bildungskapazitäten, beispielsweise durch den Bau von Schulkantinen, damit Kinder in der Schule bleiben. Dazu gehören die Spende von Schulmaterialien sowie Bau und Sanierung von Klassenräumen und Toiletten. Die Organisation unterstützt außerdem die soziale und berufliche Wiedereingliederung gefährdeter Kinder. LIKOLEH CI plant die Einführung von Computern in Grund- und Vorschulen. Zusätzlich werden Wasser-, Hygiene- und Sanitärprogramme (WASH in schools) durchgeführt, mit besonderem Fokus auf Menstruationshygiene für Mädchen und Wasserstellenmanagement.",
-
-work2Title:"Stärkung der Rolle der Frau",
-
-work2Preview:"Förderung wirtschaftlicher Unabhängigkeit und Führungsrollen für Frauen in lokalen Gemeinschaften.",
-work2More:"Die NGO LIKOLEH CI fördert Frauen und Mädchen in Führungspositionen in der Gemeinschaft, insbesondere durch Unterstützung ihrer Integration in traditionelle Entscheidungsstrukturen sowie durch Stärkung ihrer Bildungs- und Managementfähigkeiten, des sozialen Zusammenhalts und des Friedens. Frauen werden außerdem bei der Einrichtung einkommensschaffender Aktivitäten unterstützt, etwa durch Landwirtschaft und lokale Verarbeitung von Produkten wie Reis, Maniok, Hirse oder Sorghum. Eine wichtige Aktivität zur Stärkung der Frauen im Tonkpi-Gebiet ist außerdem die verbesserte Gemeinschaftsspargruppe AVEC.",
-
-work3Title:"Kinderschutz",
-
-work3Preview:"Schutz verletzlicher Kinder und Förderung sicherer Lernorte.",
-work3More:"Für die NGO LIKOLEH CI und den Staat Côte d’Ivoire hat jedes Kind das Recht auf eine Identität. Die Geburtsurkunde ist daher ein lebenswichtiges Dokument. Die NGO setzt sich dafür ein, dass Geburtsregistrierung direkt in Entbindungskliniken erfolgt, damit jedes Kind sofort registriert wird. Zusätzlich identifiziert LIKOLEH CI besonders gefährdete Kinder im ganzen Land und arbeitet mit Gemeinden und Behörden zusammen, um Ersatzurkunden zu erhalten und den Schulbesuch zu ermöglichen."
+moreText.style.display = "inline"
+button.textContent = "Show less"
 
 }
 
-};
+})
+
+})
 
 
+// VIDEO MODAL
 
-function setLanguage(lang){
+const videoCard = document.querySelector(".video-card")
+const modal = document.getElementById("videoModal")
+const modalVideo = document.getElementById("modalVideo")
+const closeModal = document.querySelector(".close-modal")
 
-document.getElementById("hero-title").innerText = translations[lang].heroTitle;
-document.getElementById("hero-text").innerText = translations[lang].heroText;
+videoCard.addEventListener("click", () => {
 
-document.getElementById("donate-btn").innerText = translations[lang].donate;
-document.getElementById("contact-btn").innerText = translations[lang].contact;
+modal.style.display = "flex"
+modalVideo.currentTime = 0
+modalVideo.muted = false
+modalVideo.play()
 
-document.getElementById("about-title").innerText = translations[lang].aboutTitle;
-document.getElementById("about-text").innerText = translations[lang].aboutText;
+})
 
-document.getElementById("work-title").innerText = translations[lang].workTitle;
+closeModal.addEventListener("click", () => {
 
-document.getElementById("work1-title").innerText = translations[lang].work1Title;
-document.getElementById("work1-preview").innerText = translations[lang].work1Preview;
-document.getElementById("work1-more").innerText = translations[lang].work1More;
+modal.style.display = "none"
+modalVideo.pause()
 
-document.getElementById("work2-title").innerText = translations[lang].work2Title;
-document.getElementById("work2-preview").innerText = translations[lang].work2Preview;
-document.getElementById("work2-more").innerText = translations[lang].work2More;
+})
 
-document.getElementById("work3-title").innerText = translations[lang].work3Title;
-document.getElementById("work3-preview").innerText = translations[lang].work3Preview;
-document.getElementById("work3-more").innerText = translations[lang].work3More;
+window.addEventListener("click", (e) => {
 
-resetReadMoreStates();
+if(e.target === modal){
 
-localStorage.setItem("language", lang);
+modal.style.display = "none"
+modalVideo.pause()
 
 }
 
-function resetReadMoreStates(){
-  document.querySelectorAll(".more-text").forEach(more => {
-    more.style.display = "none";
-  });
-  document.querySelectorAll(".read-more-btn").forEach(btn => {
-    btn.textContent = "Read more";
-  });
-}
-
-function attachReadMoreListeners(){
-  document.querySelectorAll(".read-more-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const paragraph = btn.previousElementSibling;
-      if(!paragraph) return;
-      const moreText = paragraph.querySelector(".more-text");
-      if(!moreText) return;
-      const isVisible = moreText.style.display === "inline";
-      moreText.style.display = isVisible ? "none" : "inline";
-      btn.textContent = isVisible ? "Read more" : "Show less";
-    });
-  });
-}
-attachReadMoreListeners();
-
-const savedLang = localStorage.getItem("language") || "en";
-setLanguage(savedLang);
+})
