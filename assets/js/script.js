@@ -107,57 +107,27 @@ support_button:"Jetzt spenden"
 
 
 // ---------------------------
-// SAFE TEXT UPDATE
-// ---------------------------
-
-function updateText(selector,text){
-
-const element=document.querySelector(selector)
-
-if(element){
-element.textContent=text
-}
-
-}
-
-
-// ---------------------------
 // LANGUAGE SWITCH
 // ---------------------------
 
+function applyTranslations(lang){
+
+document.querySelectorAll("[data-i18n]").forEach(element=>{
+
+const key=element.dataset.i18n
+const translatedText=translations[lang]?.[key]
+
+if(translatedText){
+element.textContent=translatedText
+}
+
+})
+
+}
+
 function setLanguage(lang){
-
-updateText("[data-hero-title]",translations[lang].hero_title)
-updateText("[data-hero-text]",translations[lang].hero_text)
-
-updateText("[data-about-title]",translations[lang].about_title)
-updateText("[data-about-text]",translations[lang].about_text)
-
-updateText("[data-work-title]",translations[lang].work_title)
-
-updateText("[data-work-edu-title]",translations[lang].work_edu_title)
-updateText("[data-work-edu-short]",translations[lang].work_edu_short)
-updateText("[data-work-edu-more]",translations[lang].work_edu_more)
-
-updateText("[data-work-women-title]",translations[lang].work_women_title)
-updateText("[data-work-women-short]",translations[lang].work_women_short)
-updateText("[data-work-women-more]",translations[lang].work_women_more)
-
-updateText("[data-work-child-title]",translations[lang].work_child_title)
-updateText("[data-work-child-short]",translations[lang].work_child_short)
-updateText("[data-work-child-more]",translations[lang].work_child_more)
-
-updateText("[data-impact-title]",translations[lang].impact_title)
-
-updateText("[data-impact-years]",translations[lang].impact_years)
-updateText("[data-impact-children]",translations[lang].impact_children)
-updateText("[data-impact-women]",translations[lang].impact_women)
-updateText("[data-impact-communities]",translations[lang].impact_communities)
-
-updateText("[data-support-title]",translations[lang].support_title)
-updateText("[data-support-text]",translations[lang].support_text)
-updateText("[data-support-button]",translations[lang].support_button)
-
+applyTranslations(lang)
+localStorage.setItem("site_language",lang)
 }
 
 
@@ -168,6 +138,14 @@ updateText("[data-support-button]",translations[lang].support_button)
 document.getElementById("lang-en").onclick=()=>setLanguage("en")
 document.getElementById("lang-fr").onclick=()=>setLanguage("fr")
 document.getElementById("lang-de").onclick=()=>setLanguage("de")
+
+const savedLang=localStorage.getItem("site_language")
+
+if(savedLang&&translations[savedLang]){
+applyTranslations(savedLang)
+}else{
+applyTranslations("en")
+}
 
 
 // ---------------------------
