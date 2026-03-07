@@ -34,7 +34,10 @@ impact_communities:"Communities reached in Côte d’Ivoire",
 
 support_title:"Support Our Work",
 support_text:"Your support helps LIKOLEH CI empower women, protect children and strengthen rural communities across Côte d’Ivoire.",
-support_button:"Donate Now"
+support_button:"Donate Now",
+
+projects_title:"Projects Timeline",
+projects_intro:"A chronological overview of LIKOLEH CI projects since 2014 across Tonkpi and neighboring communities."
 },
 
 fr:{
@@ -67,7 +70,10 @@ impact_communities:"Communautés atteintes en Côte d’Ivoire",
 
 support_title:"Soutenez notre action",
 support_text:"Votre soutien aide LIKOLEH CI à autonomiser les femmes, protéger les enfants et renforcer les communautés rurales à travers la Côte d’Ivoire.",
-support_button:"Faire un don"
+support_button:"Faire un don",
+
+projects_title:"Chronologie des projets",
+projects_intro:"Un aperçu chronologique des projets de LIKOLEH CI depuis 2014 dans le Tonkpi et les communautés voisines."
 },
 
 de:{
@@ -100,7 +106,10 @@ impact_communities:"Erreichte Gemeinden in Côte d’Ivoire",
 
 support_title:"Unterstützen Sie unsere Arbeit",
 support_text:"Ihre Unterstützung hilft LIKOLEH CI, Frauen zu stärken, Kinder zu schützen und ländliche Gemeinschaften in ganz Côte d’Ivoire zu stärken.",
-support_button:"Jetzt spenden"
+support_button:"Jetzt spenden",
+
+projects_title:"Projektzeitachse",
+projects_intro:"Ein chronologischer Überblick über die Projekte von LIKOLEH CI seit 2014 im Tonkpi und den benachbarten Gemeinschaften."
 }
 
 };

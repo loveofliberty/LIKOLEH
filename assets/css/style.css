@@ -24,6 +24,29 @@ z-index:1000;
 height:60px;
 }
 
+.main-nav{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.main-nav a{
+text-decoration:none;
+font-weight:500;
+color:#333;
+}
+
+.main-nav a:hover{
+color:#0f6d5f;
+}
+
+.main-nav .donate-btn{
+background:#f2b705;
+padding:8px 14px;
+border-radius:6px;
+font-weight:bold;
+}
+
 .language-switcher{
 display:flex;
 align-items:center;
@@ -316,6 +339,19 @@ cursor:pointer;
 
 @media (max-width:1000px){
 
+header{
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+}
+
+.main-nav{
+order:3;
+width:100%;
+justify-content:center;
+flex-wrap:wrap;
+}
+
 .work-grid{
 grid-template-columns:repeat(2,1fr);
 }
@@ -328,6 +364,14 @@ grid-template-columns:repeat(2,1fr);
 
 
 @media (max-width:640px){
+
+.main-nav{
+gap:12px;
+}
+
+.main-nav a{
+font-size:14px;
+}
 
 .work-grid{
 grid-template-columns:1fr;
