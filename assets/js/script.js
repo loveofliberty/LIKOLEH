@@ -7,6 +7,8 @@ const translations = {
 en:{
 hero_title:"Empowering Communities. Protecting Futures.",
 hero_text:"LIKOLEH CI works across Côte d’Ivoire to empower women, protect children and strengthen rural communities through education and sustainable development.",
+hero_donate:"Donate",
+hero_contact:"Contact",
 
 about_title:"About LIKOLEH",
 about_text:"Founded in 2014 in Man, Tonkpi Region, LIKOLEH CI is a registered Ivorian NGO promoting economic empowerment, child protection, education and peacebuilding.",
@@ -60,6 +62,8 @@ project_2023_swedd:"SWEDD project implementation support"
 fr:{
 hero_title:"Autonomiser les communautés. Protéger l'avenir.",
 hero_text:"LIKOLEH CI œuvre en Côte d’Ivoire pour autonomiser les femmes, protéger les enfants et renforcer les communautés rurales.",
+hero_donate:"Faire un don",
+hero_contact:"Contact",
 
 about_title:"À propos de LIKOLEH",
 about_text:"Fondée en 2014 à Man dans la région du Tonkpi, LIKOLEH CI est une ONG ivoirienne enregistrée.",
@@ -113,6 +117,8 @@ project_2023_swedd:"Appui à la mise en œuvre du projet SWEDD"
 de:{
 hero_title:"Gemeinschaften stärken. Zukunft schützen.",
 hero_text:"LIKOLEH CI arbeitet in Côte d’Ivoire, um Frauen zu stärken, Kinder zu schützen und ländliche Gemeinschaften zu fördern.",
+hero_donate:"Spenden",
+hero_contact:"Kontakt",
 
 about_title:"Über LIKOLEH",
 about_text:"Gegründet 2014 in Man, Region Tonkpi, ist LIKOLEH CI eine registrierte ivorische NGO.",
