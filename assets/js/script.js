@@ -37,7 +37,24 @@ support_text:"Your support helps LIKOLEH CI empower women, protect children and 
 support_button:"Donate Now",
 
 projects_title:"Projects Timeline",
-projects_intro:"A chronological overview of LIKOLEH CI projects since 2014 across Tonkpi and neighboring communities."
+projects_intro:"A chronological overview of LIKOLEH CI projects since 2014 across Tonkpi and neighboring communities.",
+
+nav_home:"Home",
+nav_projects:"Projects",
+nav_impact:"Impact",
+nav_donate:"Donate",
+nav_contact:"Contact",
+
+project_2014_rights:"Fight against abuse of women's rights through human rights education in Tonkpi",
+project_2015_inequalities:"Fight against social inequalities in Tonkpi",
+project_2015_cassava:"Semi-modern cassava processing unit in Gouekanguine",
+project_2016_registry:"Fight against abuse of women's rights through civil registry services near maternity units",
+project_2017_women:"Women empowerment and income-generation support program",
+project_2019_sanitation:"School sanitation improvement initiative",
+project_2020_village_sanitation:"Inter-village sanitation and hygiene reinforcement project",
+project_2021_school_abuse:"Prevention of human rights abuse in schools",
+project_2021_birth_registration:"Birth registration and teenage pregnancy prevention campaign",
+project_2023_swedd:"SWEDD project implementation support"
 },
 
 fr:{
@@ -73,7 +90,24 @@ support_text:"Votre soutien aide LIKOLEH CI à autonomiser les femmes, protéger
 support_button:"Faire un don",
 
 projects_title:"Chronologie des projets",
-projects_intro:"Un aperçu chronologique des projets de LIKOLEH CI depuis 2014 dans le Tonkpi et les communautés voisines."
+projects_intro:"Un aperçu chronologique des projets de LIKOLEH CI depuis 2014 dans le Tonkpi et les communautés voisines.",
+
+nav_home:"Accueil",
+nav_projects:"Projets",
+nav_impact:"Impact",
+nav_donate:"Don",
+nav_contact:"Contact",
+
+project_2014_rights:"Lutte contre les abus des droits des femmes par l'éducation aux droits humains à Tonkpi",
+project_2015_inequalities:"Lutte contre les inégalités sociales à Tonkpi",
+project_2015_cassava:"Unité semi-moderne de transformation du manioc à Gouekanguine",
+project_2016_registry:"Lutte contre les abus des droits des femmes via les services d'état civil près des maternités",
+project_2017_women:"Programme d'autonomisation des femmes et de soutien à la génération de revenus",
+project_2019_sanitation:"Initiative d'amélioration de l'assainissement scolaire",
+project_2020_village_sanitation:"Projet inter-villages de renforcement de l'assainissement et de l'hygiène",
+project_2021_school_abuse:"Prévention des abus des droits humains dans les écoles",
+project_2021_birth_registration:"Campagne d'enregistrement des naissances et de prévention des grossesses précoces",
+project_2023_swedd:"Appui à la mise en œuvre du projet SWEDD"
 },
 
 de:{
@@ -109,17 +143,32 @@ support_text:"Ihre Unterstützung hilft LIKOLEH CI, Frauen zu stärken, Kinder z
 support_button:"Jetzt spenden",
 
 projects_title:"Projektzeitachse",
-projects_intro:"Ein chronologischer Überblick über die Projekte von LIKOLEH CI seit 2014 im Tonkpi und den benachbarten Gemeinschaften."
+projects_intro:"Ein chronologischer Überblick über die Projekte von LIKOLEH CI seit 2014 im Tonkpi und den benachbarten Gemeinschaften.",
+
+nav_home:"Startseite",
+nav_projects:"Projekte",
+nav_impact:"Wirkung",
+nav_donate:"Spenden",
+nav_contact:"Kontakt",
+
+project_2014_rights:"Bekämpfung von Frauenrechtsverletzungen durch Menschenrechtsbildung in Tonkpi",
+project_2015_inequalities:"Bekämpfung sozialer Ungleichheiten in Tonkpi",
+project_2015_cassava:"Halbmoderne Maniok-Verarbeitungseinheit in Gouekanguine",
+project_2016_registry:"Bekämpfung von Frauenrechtsverletzungen durch zivilstandsnahe Dienste bei Entbindungsstationen",
+project_2017_women:"Programm zur Stärkung von Frauen und Einkommensförderung",
+project_2019_sanitation:"Initiative zur Verbesserung der sanitären Bedingungen an Schulen",
+project_2020_village_sanitation:"Interdörfliches Projekt zur Stärkung von Hygiene und Sanitärversorgung",
+project_2021_school_abuse:"Prävention von Menschenrechtsverletzungen in Schulen",
+project_2021_birth_registration:"Kampagne zur Geburtenregistrierung und Prävention von Teenagerschwangerschaften",
+project_2023_swedd:"Unterstützung bei der Umsetzung des SWEDD-Projekts"
 }
 
 };
 
-
-// ---------------------------
-// LANGUAGE SWITCH
-// ---------------------------
+let currentLanguage = "en"
 
 function applyTranslations(lang){
+currentLanguage = lang
 
 document.querySelectorAll("[data-i18n]").forEach(element=>{
 
@@ -131,7 +180,6 @@ element.textContent=translatedText
 }
 
 })
-
 }
 
 function setLanguage(lang){
@@ -139,22 +187,37 @@ applyTranslations(lang)
 localStorage.setItem("site_language",lang)
 }
 
+function bindLanguageSwitcher(){
+const enButton = document.getElementById("lang-en")
+const frButton = document.getElementById("lang-fr")
+const deButton = document.getElementById("lang-de")
 
-// ---------------------------
-// FLAG EVENTS
-// ---------------------------
-
-document.getElementById("lang-en").onclick=()=>setLanguage("en")
-document.getElementById("lang-fr").onclick=()=>setLanguage("fr")
-document.getElementById("lang-de").onclick=()=>setLanguage("de")
-
-const savedLang=localStorage.getItem("site_language")
-
-if(savedLang&&translations[savedLang]){
-applyTranslations(savedLang)
-}else{
-applyTranslations("en")
+if(enButton){
+enButton.onclick=()=>setLanguage("en")
 }
+
+if(frButton){
+frButton.onclick=()=>setLanguage("fr")
+}
+
+if(deButton){
+deButton.onclick=()=>setLanguage("de")
+}
+}
+
+function initializeLanguage(){
+const savedLang=localStorage.getItem("site_language")
+const langToApply = savedLang&&translations[savedLang] ? savedLang : "en"
+applyTranslations(langToApply)
+bindLanguageSwitcher()
+}
+
+initializeLanguage()
+
+document.addEventListener("layoutLoaded",()=>{
+bindLanguageSwitcher()
+applyTranslations(currentLanguage)
+})
 
 
 // ---------------------------
@@ -193,7 +256,7 @@ const modal=document.getElementById("videoModal")
 const modalVideo=document.getElementById("modalVideo")
 const closeModal=document.querySelector(".close-modal")
 
-if(videoCard){
+if(videoCard&&modal&&modalVideo){
 
 videoCard.addEventListener("click",()=>{
 
@@ -206,7 +269,7 @@ modalVideo.play()
 
 }
 
-if(closeModal){
+if(closeModal&&modal&&modalVideo){
 
 closeModal.addEventListener("click",()=>{
 
@@ -219,7 +282,7 @@ modalVideo.pause()
 
 window.addEventListener("click",(e)=>{
 
-if(e.target===modal){
+if(modal&&modalVideo&&e.target===modal){
 
 modal.style.display="none"
 modalVideo.pause()
