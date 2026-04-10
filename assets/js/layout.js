@@ -16,6 +16,20 @@ if (footerContainer) {
 footerContainer.innerHTML = footerHtml
 }
 
+// Fix image paths for project subpages
+if (isProjectPage) {
+const header = document.querySelector("header")
+if (header) {
+const imgs = header.querySelectorAll(".logo img, .flags img, .language-switcher img")
+imgs.forEach(img => {
+const src = img.getAttribute("src") || ""
+if (src.startsWith("assets/") && !src.startsWith("../assets/")) {
+img.setAttribute("src", `../${src}`)
+}
+})
+}
+}
+
 const toggle = document.getElementById("menu-toggle")
 const nav = document.getElementById("nav-container")
 
