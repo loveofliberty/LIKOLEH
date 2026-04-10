@@ -189,7 +189,8 @@ display:flex;
 flex-direction:column;
 gap:10px;
 min-height:0;
-block-size:220px;
+/* fixed height without relying on logical properties that some validators flag */
+height:220px;
 overflow:hidden;
 }
 
@@ -334,7 +335,7 @@ grid-template-columns:1fr;
 }
 
 .work-card .content{
-block-size:240px;
+height:240px;
 }
 
 .impact-grid{
