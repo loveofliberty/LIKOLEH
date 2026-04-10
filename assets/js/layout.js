@@ -1,6 +1,9 @@
-﻿Promise.all([
-fetch("partials/header.html").then(res => res.text()),
-fetch("partials/footer.html").then(res => res.text())
+﻿const isProjectPage = window.location.pathname.includes("/projects/")
+const basePath = isProjectPage ? "../" : ""
+
+Promise.all([
+fetch(`${basePath}partials/header.html`).then(res => res.text()),
+fetch(`${basePath}partials/footer.html`).then(res => res.text())
 ]).then(([headerHtml, footerHtml]) => {
 const headerContainer = document.getElementById("site-header")
 const footerContainer = document.getElementById("site-footer")

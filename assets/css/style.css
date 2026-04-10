@@ -1,8 +1,15 @@
 body{
 margin:0;
+display:flex;
+flex-direction:column;
+min-height:100vh;
 font-family:Arial, Helvetica, sans-serif;
 background:#f4f4f4;
 color:#333;
+}
+
+main{
+flex:1;
 }
 
 
@@ -391,6 +398,106 @@ display:inline-block;
 
 .read-more-btn:hover{
 text-decoration:underline;
+}
+
+
+/* PROJECT PAGES */
+
+.project-page{
+padding:60px 20px 80px;
+}
+
+.container{
+max-width:1200px;
+margin:0 auto;
+width:100%;
+}
+
+.project-layout{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:40px;
+align-items:start;
+}
+
+.project-card-detail{
+background:#fff;
+border-radius:8px;
+padding:28px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.project-card-detail h1{
+margin-top:0;
+margin-bottom:16px;
+font-size:26px;
+color:#0f6d5f;
+}
+
+.project-meta{
+display:grid;
+gap:8px;
+margin-bottom:16px;
+}
+
+.project-description{
+line-height:1.6;
+margin:0 0 20px;
+}
+
+.project-donate{
+margin-top:20px;
+}
+
+.btn-support{
+display:inline-block;
+background:#ffcc00;
+color:black;
+font-weight:700;
+padding:12px 24px;
+border-radius:6px;
+text-decoration:none;
+}
+
+.btn-support:hover{
+filter:brightness(0.95);
+}
+
+.project-image-placeholder{
+background:linear-gradient(135deg,#e8eef5,#f7f9fc);
+border:1px dashed #c6d3e5;
+padding:30px;
+border-radius:8px;
+text-align:center;
+color:#4a5565;
+font-size:14px;
+line-height:1.6;
+}
+
+.project-nav{
+max-width:1200px;
+margin:0 auto 16px;
+width:100%;
+}
+
+.breadcrumb{
+text-decoration:none;
+color:#0f6d5f;
+font-weight:700;
+display:inline-flex;
+align-items:center;
+gap:6px;
+}
+
+.breadcrumb:hover{
+color:#0056b3;
+}
+
+
+@media (max-width:900px){
+.project-layout{
+grid-template-columns:1fr;
+}
 }
 
 
