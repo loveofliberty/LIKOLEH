@@ -625,18 +625,24 @@ margin-left:0;
 }
 
 .footer-links {
-margin-top:20px;
+margin-top:10px;
 text-align:center;
 }
 
 .footer-links a {
 margin:0 8px;
 font-size:0.85rem;
-opacity:0.8;
+opacity:0.9;
 text-decoration:none;
+color:#ffffff;
+font-weight:500;
 }
 
 .footer-links a:hover {
 opacity:1;
 text-decoration:underline;
+}
+
+.footer{
+background-color:#000;
 }
