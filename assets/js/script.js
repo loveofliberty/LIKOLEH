@@ -93,11 +93,10 @@ function updateText(selector, text){
 
 const element = document.querySelector(selector)
 
-if(translatedText){
-element.textContent=translatedText
+if(element){
+element.textContent=text
 }
 
-})
 }
 
 function setLanguage(lang){
@@ -206,5 +205,3 @@ modal.style.display="none"
 modalVideo.pause()
 
 }
-
-})
