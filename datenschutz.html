@@ -62,11 +62,11 @@
 <div id="footer"></div>
 
 <script>
-fetch("/partials/header.html")
+fetch("partials/header.html?v=1")
   .then(res => res.text())
   .then(data => document.getElementById("header").innerHTML = data);
 
-fetch("/partials/footer.html")
+fetch("partials/footer.html?v=1")
   .then(res => res.text())
   .then(data => document.getElementById("footer").innerHTML = data);
 </script>

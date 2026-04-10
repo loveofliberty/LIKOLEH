@@ -207,6 +207,19 @@ LIKOLEH arbeitet mit lokalen Behörden zusammen, um Geburtsregistrierungen zu er
 
 <div id="site-footer"></div>
 
+<div id="footer"></div>
+
+<script>
+fetch("partials/footer.html?v=1")
+  .then(res => res.text())
+  .then(data => {
+    const target = document.getElementById("footer")
+    if (target) {
+      target.innerHTML = data
+    }
+  })
+</script>
+
 
 
 <div id="videoModal" class="modal">
