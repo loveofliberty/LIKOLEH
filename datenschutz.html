@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung - LIKOLEH</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+<main class="timeline-page">
+  <h1>Datenschutzerklärung</h1>
+
+  <section>
+    <h2>Allgemeine Hinweise</h2>
+    <p>Diese Website ist eine statische Seite (GitHub Pages, ggf. über Cloudflare ausgeliefert). Es werden nur die technisch notwendigen Daten verarbeitet.</p>
+  </section>
+
+  <section>
+    <h2>Verantwortlicher</h2>
+    <p>[INSERT NAME]<br>[INSERT ADDRESS]<br>E-Mail: [INSERT EMAIL]</p>
+  </section>
+
+  <section>
+    <h2>Hosting</h2>
+    <p>Bereitstellung der Website über GitHub Pages; Auslieferung kann über Cloudflare CDN erfolgen.</p>
+  </section>
+
+  <section>
+    <h2>Server-Logfiles</h2>
+    <p>Beim Aufruf können IP-Adresse, Datum/Uhrzeit, abgerufene Datei, Browsertyp und Betriebssystem in Logfiles gespeichert werden. Die Daten dienen der Sicherheit und Fehleranalyse und werden nicht zu Marketingzwecken genutzt.</p>
+  </section>
+
+  <section>
+    <h2>Kontaktaufnahme</h2>
+    <p>Bei Kontakt per E-Mail verarbeiten wir die angegebenen Daten zur Bearbeitung der Anfrage. Bitte nutzen Sie: [INSERT EMAIL].</p>
+  </section>
+
+  <section>
+    <h2>Cookies</h2>
+    <p>Es werden nur technisch notwendige Cookies bzw. lokaler Speicher eingesetzt (z. B. für Spracheinstellungen).</p>
+  </section>
+
+  <section>
+    <h2>Rechte der Nutzer</h2>
+    <p>Sie haben im Rahmen der gesetzlichen Vorgaben Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch und Datenübertragbarkeit. Bitte wenden Sie sich an [INSERT EMAIL].</p>
+  </section>
+
+  <section>
+    <h2>Beschwerderecht</h2>
+    <p>Sie haben das Recht, sich bei einer zuständigen Datenschutzaufsichtsbehörde zu beschweren.</p>
+  </section>
+
+  <section>
+    <h2>Änderungen</h2>
+    <p>Diese Datenschutzerklärung kann bei Bedarf angepasst werden. Es gilt die jeweils aktuelle Fassung auf dieser Seite.</p>
+  </section>
+</main>
+
+<div id="footer"></div>
+
+<script>
+fetch("/partials/header.html")
+  .then(res => res.text())
+  .then(data => document.getElementById("header").innerHTML = data);
+
+fetch("/partials/footer.html")
+  .then(res => res.text())
+  .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+</body>
+</html>
