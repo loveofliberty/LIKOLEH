@@ -532,14 +532,14 @@ margin:0 auto;
 max-width:960px;
 }
 
-.timeline::before{
+  .timeline::before{
 content:""; 
 position:absolute;
 top:0;
 bottom:0;
 left:50%;
 width:4px;
-background:#dce8f5;
+background:#0f6d5f;
 transform:translateX(-50%);
 }
 
@@ -550,12 +550,12 @@ text-align:center;
 padding:0 20px;
 }
 
-.timeline-year h2{
+  .timeline-year h2{
 margin:0 auto 16px;
 width:80px;
 height:80px;
 border-radius:50%;
-background:#0056b3;
+background:#0f6d5f;
 color:#fff;
 display:flex;
 align-items:center;
@@ -571,13 +571,13 @@ flex-direction:column;
 gap:14px;
 }
 
-.timeline-card{
+  .timeline-card{
 display:block;
 background:#fff;
 color:#1f2b3a;
 text-decoration:none;
 padding:18px 18px 18px 20px;
-border-left:5px solid #0056b3;
+border-left:5px solid #0f6d5f;
 border-radius:8px;
 box-shadow:0 4px 6px rgba(0,0,0,0.1);
 transition:transform 0.2s ease, box-shadow 0.2s ease;
