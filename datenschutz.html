@@ -15,7 +15,7 @@
 
   <section>
     <h2>Allgemeine Hinweise</h2>
-    <p>Diese Website ist eine statische Seite (GitHub Pages, ggf. über Cloudflare ausgeliefert). Es werden nur die technisch notwendigen Daten verarbeitet.</p>
+    <p>Diese Website ist eine statische Seite, die über GitHub Pages bereitgestellt wird.</p>
   </section>
 
   <section>
@@ -42,7 +42,7 @@
 
   <section>
     <h2>Hosting</h2>
-    <p>Die Website wird über GitHub Pages bereitgestellt. Die Auslieferung kann über das Content Delivery Network (CDN) von Cloudflare erfolgen.</p>
+    <p>Die Website wird über GitHub Pages bereitgestellt.</p>
   </section>
 
   <section>
@@ -56,8 +56,13 @@
   </section>
 
   <section>
-    <h2>Cookies</h2>
-    <p>Es werden nur technisch notwendige Cookies bzw. lokaler Speicher eingesetzt (z. B. für Spracheinstellungen). Eine Einwilligung ist daher nicht erforderlich.</p>
+    <h2>Cookies und lokaler Browserspeicher</h2>
+    <p>Diese Website setzt keine Cookies. Der lokale Browserspeicher (localStorage) wird ausschließlich verwendet, um die gewählte Sprache unter dem Schlüssel <code>likoleh_lang</code> zu speichern. Simple Analytics setzt ebenfalls keine Cookies und verwendet für die Besucherstatistik weder localStorage noch sessionStorage.</p>
+  </section>
+
+  <section>
+    <h2>Besucherstatistik mit Simple Analytics</h2>
+    <p>Zur datenschutzfreundlichen statistischen Auswertung der Nutzung dieser Website verwenden wir Simple Analytics. Anbieter ist Simple Analytics B.V. mit Sitz in den Niederlanden. Der Dienst liefert aggregierte Informationen, insbesondere zu Seitenaufrufen und zur Herkunft von Aufrufen. Simple Analytics setzt keine Cookies, verwendet für die Besucherstatistik weder localStorage noch sessionStorage und legt keine Besucher-IDs oder Nutzerprofile an. Es findet kein Cross-Site-Tracking und kein Fingerprinting statt. IP-Adressen werden nach Angaben des Anbieters nicht gespeichert und bei jeder Anfrage unmittelbar verworfen. Die Statistikdaten sind nicht dazu bestimmt, einzelne Besucher zu identifizieren. Die Analytics-Infrastruktur und Datenverarbeitung befinden sich nach Angaben des Anbieters innerhalb der Europäischen Union. Wir verwenden die Statistik ausschließlich zur aggregierten Reichweitenmessung. Weitere Informationen enthält die <a href="https://www.simpleanalytics.com/privacy-policy">Datenschutzerklärung von Simple Analytics</a>.</p>
   </section>
 
   <section>
@@ -87,5 +92,8 @@ fetch("partials/footer.html?v=1")
   .then(res => res.text())
   .then(data => document.getElementById("footer").innerHTML = data);
 </script>
+
+<!-- Simple Analytics - 100% privacy-first analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
 </html>
